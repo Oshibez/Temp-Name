@@ -2,7 +2,9 @@ name: Generate and Deploy
 
 on:
   push:
-    branches: ["fix-pages"]
+    branches: ["main"]
+    paths:
+      - "**"
   workflow_dispatch:
 
 permissions:
@@ -25,6 +27,11 @@ jobs:
         uses: actions/setup-node@v4.4.0
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+          
   deploy:
     needs: build
     runs-on: ubuntu-latest
