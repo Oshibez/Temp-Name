@@ -1,3 +1,7 @@
 /.github/workflows/deploy.yml @felixqx1
 /LICENSE @felixqx1 @Oshibez
 /.github/CODEOWNERS @felixqx1 @Oshibez
+/vite.config.ts
+/tsconfig.json
+/svelte.config.js
+/.svelte-kit
